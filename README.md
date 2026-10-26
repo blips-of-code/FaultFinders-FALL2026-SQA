@@ -1,7 +1,7 @@
 # Fall 2026 SQA Project
 
 **Course:** COMP 6710: Software Quality Assurance  
-**Team Name:** FaultFinders
+**Team:** 5
 
 ## Team Members
 - Sharmin Zaman
