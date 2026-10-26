@@ -2,10 +2,11 @@ name: Build KubeTaint
 
 on:
   push:
-    branches: [ slikube-enhancement, master ]
+    branches: [main]
   pull_request:
-     branches: [ master ]
-
+    branches: [main]
+  workflow_dispatch:
+  
 jobs:
   build:
 
