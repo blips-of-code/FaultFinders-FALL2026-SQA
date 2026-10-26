@@ -1,16 +1,61 @@
-## FALL 2026 SQA Project
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
 
-**Course:** COMP 6710 
-**Team:** FaultFinders
+[![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)
 
-## Team Members
-- Sharmin Zaman
-- Bhuvaneshwari Bodakuntla
+[![Actions Status](https://github.com/paser-group/KubeSec/workflows/Build%20KubeTaint/badge.svg)](https://github.com/Build%20TaintPupp/actions)
 
-## Project Overview
-This repository contains our Software Quality Assurance project, based on the provided KubeSec Python codebase.
 
-The project will incorporate automated fuzz testing, forensic instrumentation, and continuous integration using GitHub Actions.
+# Taintube: Taint Tracking for Security Analysis of Kubernetes Manifests 
 
-## Project Status
-In progress.
+## Development Environment
+We use Conda to manage the virtual environment for KubeSec. To see the content of the environment, see [environment.yml](./environment.yml).
+
+To use the environment, use the following commands.
+
+```bash
+# Create
+conda env create -f environment.yml
+
+# Activate
+conda activate KUBESEC
+
+# Deactivate
+conda deactivate
+
+# Export (if you modify the environment)
+conda env export --from-history > environment.yml
+```
+
+## Running the tool
+
+The tool is available as a Docker image: https://hub.docker.com/repository/docker/akondrahman/sli-kube 
+
+### Instruction to run the tool from Docker Hub:
+
+- docker rm $(docker ps -a -f status=exited -f status=created -q)
+- docker rmi -f $(docker images -a -q)
+- docker pull akondrahman/sli-kube
+- docker images -a
+- docker run --rm -it akondrahman/sli-kube bash
+- cd SLI-KUBE-WORK/KubeSec-master/
+- python3 main.py
+
+### Build and run locally
+You can also build the docker container locally.
+
+After running the tool, you will find a CSV file called 'slikube_results.csv' in the scanned directory.
+
+```bash
+# Build the image
+docker build -t slikube .
+
+# Run the container 
+# Replace '/Users/phu/Desktop/tf-open-source/aws-eks-base' with your local path
+docker run --rm -v /Users/phu/Desktop/tf-open-source/aws-eks-base:/iac --name slikube slikube /iac
+```
+
+## Collaborators 
+
+Akond Rahman (Lead), Rahul Pandita, and Shazibul Islam Shamim 
+
+
