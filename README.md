@@ -1,3 +1,23 @@
+# Fall 2026 SQA Project
+
+**Course:** COMP 6710: Software Quality Assurance  
+**Team Name:** FaultFinders
+
+## Team Members
+- Sharmin Zaman
+- Bhuvaneshwari Bodakuntla
+
+## Project Overview
+
+This repository contains our Software Quality Assurance project for Fall 2026. Using the provided KubeSec codebase, our team will implement automated fuzz testing, forensic instrumentation, and continuous integration through GitHub Actions.
+
+## Original Project
+
+The original KubeSec project documentation is included below.
+
+---
+
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
 
 [![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)
