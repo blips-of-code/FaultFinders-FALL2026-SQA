@@ -1,6 +1,6 @@
 ## FALL 2026 SQA Project
 
-**Course:** COMP 6710 — Software Quality Assurance  
+**Course:** COMP 6710 
 **Team:** FaultFinders
 
 ## Team Members
